@@ -187,6 +187,7 @@ document.addEventListener('touchend',function(event){
     if(Math.abs(deltax) >= Math.abs(deltey)){
         if (deltax > 0){
             //move right
+            event.preventDefault();
             if(moveRight()){
                 setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
@@ -194,6 +195,7 @@ document.addEventListener('touchend',function(event){
         }
         else{
             //move left
+             event.preventDefault();
             if(moveLeft()){  //判断是否可以按“左”键，如果可以，向左的同时生成一个新的随机数
                 setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);  //判断游戏是否结束
@@ -203,6 +205,7 @@ document.addEventListener('touchend',function(event){
     else{
         if(deltey > 0 ){
             //move down
+             event.preventDefault();
             if(moveDown()){
                 setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
@@ -210,6 +213,7 @@ document.addEventListener('touchend',function(event){
         }
         else{
             //move up
+             event.preventDefault();
             if(moveUp()){
                 setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
